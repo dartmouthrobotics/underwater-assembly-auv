@@ -6,3 +6,5 @@ The DXF files are usable as laser cutting patterns. The files `Electronics Tray 
 The file `Camera Mount.dxf` is cut from 3.2mm black delrin from ponoko.
 
 The file `FCU Mount.dxf` is cut from 2mm aerospace aluminum from send cut send.
+
+The hardware for assembling the components comes from mcmaster-carr and allied electronics (for the mounting brackets). See the packing lists for both of those orders for details on the components.

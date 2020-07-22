@@ -27,3 +27,8 @@ Power management:
   * 80A car relay. We used [this](https://www.amazon.com/gp/product/B00RX11KLW/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
   * 2x ZTW BECs [here](https://www.amazon.com/gp/product/B071CHGWRM/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1). One powers the FCU and the other the upboard
   * 60A boat fuse [here](https://www.amazon.com/gp/product/B0000AXYEO/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1). Protects against runaway loops in control or firmware causing components to burn out.
+  * 2.1mm barrell connector for UpSquared [here](https://www.amazon.com/gp/product/B081TV7SQ7/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
+  
+Camera:
+  * FLIR Blackfly S U3 Model: BFS-U3-16S2M-CS: 1.6 MP, 226 FPS, Sony IMX273, Mono [here](https://www.flir.com/products/blackfly-s-usb3/?model=BFS-U3-16S2M-CS)
+  * Lense: Stardot technologies LEN 3.5mm CS [here](http://stardot.com/megapixel-lenses)

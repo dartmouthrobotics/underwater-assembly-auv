@@ -32,3 +32,9 @@ Power management:
 Camera:
   * FLIR Blackfly S U3 Model: BFS-U3-16S2M-CS: 1.6 MP, 226 FPS, Sony IMX273, Mono [here](https://www.flir.com/products/blackfly-s-usb3/?model=BFS-U3-16S2M-CS)
   * Lense: Stardot technologies LEN 3.5mm CS [here](http://stardot.com/megapixel-lenses)
+
+# Software setup
+
+Install SimpleSub on the FCU. The source code for SimpleSub can be found here https://gitlab.com/dartmouthrobotics/ardupilot-simplesub. Instructions for building and uploading coming soon.
+
+Install Ubuntu 18.04 server on the UpSquared, ensuring that it is booting from the SSD and not the EMMC memory that comes with the board. Install ROS melodic.

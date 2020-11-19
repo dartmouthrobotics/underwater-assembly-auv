@@ -1,5 +1,5 @@
 # underwater-assembly-auv
-Repository containing parts list and CAD files to retrofit a BlueROV2 for improved autonomous operation. The starting point would be a BlueROV2 heavy.
+Repository containing parts list and CAD files to retrofit a BlueROV2 for improved autonomous operation. The starting point would be a BlueROV2 heavy. A CAD file of the build is available [here](https://www.dropbox.com/s/99sjkslvtko1nd0/Electronics.igs?dl=0). Note that the front mounting plate is different than what is in that CAD file. I was experimenting with adding fans for camera cooling. What I use now in the robot is represented in the dxf file below.
 
 The DXF files are usable as laser cutting patterns. The files `Electronics Tray Body.dxf`, `Electronics Tray Body.dxf`, and `rear electronics tray mount.dxf` are cut from 4.9mm delrin plastic from ponoko.com
 

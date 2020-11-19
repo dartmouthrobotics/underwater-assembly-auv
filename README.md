@@ -49,6 +49,7 @@ The mounting hardware order from McMaster has most of what you need. In addition
 # Notes
 
 * The ESC->penetrator connections are tough to fit in. You need to solder the ESC's wires at 90 degrees to the ESC body
+* I use this brand of silica gel packet [here](https://www.amazon.com/gp/product/B01LZAQPEY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1). Because of how warm it can get in the tube when the UpSquared is curning, silica descicant is necessary in the main electronics tube.
 
 # Software setup
 

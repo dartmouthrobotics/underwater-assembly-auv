@@ -61,3 +61,34 @@ The mounting hardware order from McMaster has most of what you need. In addition
 Install SimpleSub on the FCU. The source code for SimpleSub can be found here https://gitlab.com/dartmouthrobotics/ardupilot-simplesub. Instructions for building and uploading coming soon.
 
 Install Ubuntu 18.04 server on the UpSquared, ensuring that it is booting from the SSD and not the EMMC memory that comes with the board. Install ROS melodic.
+
+
+## Building & Installing the SimpleSub FCU firmware 
+
+The FCU runs a custom built Ardupilot firmware that I call SimpleSub. SimpleSub can be found here: https://gitlab.com/dartmouthrobotics/ardupilot-simplesub/-/tree/SimpleSub-v0.0.1 
+
+Clone that repository and ensure you are on the SimpleSub branch. Once you have done so, run the environment setup script that ardupilot provides by picking the right script from this directory for your OS https://gitlab.com/dartmouthrobotics/ardupilot-simplesub/-/tree/SimpleSub-v0.0.1/Tools/environment_install 
+
+After that is done, you need to reload your environment: source ~/.bashrc (if on linux) 
+
+With that, you should be able to build the code with the following commands from the ardupilot directory: 
+
+./waf configure –board=mRoX21 
+
+./waf build –targets=simplesub/SimpleSub 
+
+Adding the –upload option onto the waf build command should upload the firmware to the FCU if the FCU is plugged in to your computer via a usb connection, but this doesn’t work for me. What works is running QGroundControl and then plugging the FCU into the computer and using that GUI to upload the custom firmware. The waf build command above will put a file called “simplesub.apj” into the “bin” folder. In the QGroundControl GUI, select the upload custom firmware option and select “simplesub.apj”. This should work! 
+
+Another option for uploading the firmware that works for me is: 
+
+./waf --upload --targets simplesub/SimpleSub --upload-port /dev/ttyACM0 (I found the device descriptor /dev/ttyACM0 by looking at dmesg) 
+
+In addition it can be built and uploaded simultaneously like so: 
+
+./waf build --upload --targets simplesub/SimpleSub --upload-port /dev/ttyACM0 
+
+It looks like the issue with this was that when the device is rebooted by the firmware uploader script, it gets a different device id. The firmware uploader correctly found the first usb serial device (look at /dev/serial/by-id to find the one), but when it is booted in firmware mode, it got a different id. 
+
+This command should be easier to replicate and it worked. The first usb serial device is the one that shows normally, and the second is the one after trying to run the firmware uploader: 
+
+./waf build --upload --targets simplesub/SimpleSub --upload-port /dev/serial/by-id/usb-ArduPilot_mRoX21_3C001D000C51383437313533-if00,/dev/serial/by-id/usb-AUAV_PX4_BL_AUAV_X2.1_0-if00 

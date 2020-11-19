@@ -46,10 +46,13 @@ The mounting hardware order from McMaster has most of what you need. In addition
 * Upgrading to the cobalt connector-ized thrusters was a big lifestyle improvement. I use the cobalt connectors whenever I can: https://www.bluetrailengineering.com/product-page/blue-robotics-t200-thruster-with-cobalt-connector
 * I use high flexibility silicone wire everywhere inside the tube. It packs better than standard wire and is supposed to stand up better to vibration than standard wire. I used various sizes of this brand: [here](https://www.amazon.com/BNTECHGO-Silicone-Flexible-Resistant-Insulation/dp/B018H1BDP4/ref=pd_day0_23_1/146-2345653-4128354?_encoding=UTF8&pd_rd_i=B018H1BDP4&pd_rd_r=cafb2983-5c39-4335-8fcb-0022308be669&pd_rd_w=NUnrJ&pd_rd_wg=tu8oQ&pf_rd_p=ecf748b5-e796-4a0d-9a46-406a973ba8da&pf_rd_r=4QPC3SEZKFXJTSN7T173&psc=1&refRID=4QPC3SEZKFXJTSN7T173)
 
+
 # Notes
 
 * The ESC->penetrator connections are tough to fit in. You need to solder the ESC's wires at 90 degrees to the ESC body
 * I use this brand of silica gel packet [here](https://www.amazon.com/gp/product/B01LZAQPEY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1). Because of how warm it can get in the tube when the UpSquared is curning, silica descicant is necessary in the main electronics tube.
+* The wifi setup I use as the virtual tether makes the upboard unable to connect to the internet. To make life easier I run one of [these](https://www.amazon.com/gp/product/B01IQWGKQ6/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) ethernet cables into the camera compartment so I can easily jack the robot into the internet. I keep an ethernet cable with a junction like [this](https://www.amazon.com/gp/product/B016B13U9Y/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) handy.
+* If you want to run the robot with a tether, you will need to find a place to put the fathom-X board (the tether interface board) and to connect it to an ethernet jack on the UpBoard. There should be a good spot for doing this below the UpBoard's heatsink on the underside of the electronics board.
 
 # Software setup
 

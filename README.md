@@ -50,7 +50,7 @@ The mounting hardware order from McMaster has most of what you need. In addition
 # Notes
 
 * The ESC->penetrator connections are tough to fit in. You need to solder the ESC's wires at 90 degrees to the ESC body
-* I use this brand of silica gel packet [here](https://www.amazon.com/gp/product/B01LZAQPEY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1). Because of how warm it can get in the tube when the UpSquared is curning, silica descicant is necessary in the main electronics tube.
+* I use this brand of silica gel packet [here](https://www.amazon.com/gp/product/B01LZAQPEY/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1). Because of how warm it can get in the tube when the UpSquared is churning, silica descicant is necessary in the main electronics tube.
 * The wifi setup I use as the virtual tether makes the upboard unable to connect to the internet. To make life easier I run one of [these](https://www.amazon.com/gp/product/B01IQWGKQ6/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) ethernet cables into the camera compartment so I can easily jack the robot into the internet. I keep an ethernet cable with a junction like [this](https://www.amazon.com/gp/product/B016B13U9Y/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) handy.
 * If you want to run the robot with a tether, you will need to find a place to put the fathom-X board (the tether interface board) and to connect it to an ethernet jack on the UpBoard. There should be a good spot for doing this below the UpBoard's heatsink on the underside of the electronics board.
 

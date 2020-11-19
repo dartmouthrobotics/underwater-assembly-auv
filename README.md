@@ -33,15 +33,21 @@ Camera:
   * FLIR Blackfly S U3 Model: BFS-U3-16S2M-CS: 1.6 MP, 226 FPS, Sony IMX273, Mono [here](https://www.flir.com/products/blackfly-s-usb3/?model=BFS-U3-16S2M-CS)
   * Lense: Stardot technologies LEN 3.5mm CS [here](http://stardot.com/megapixel-lenses)
 
-# Mounting hardware
+# Other hardware
 
 The mounting hardware order from McMaster has most of what you need. In addition to that, you need:
 
 * A pack of vibration damping standoffs for the FCU: [here](https://www.amazon.com/gp/product/B082ZNTKXT/ref=ppx_yo_dt_b_search_asin_image?ie=UTF8&psc=1)
-* Vibration damping washers for mounting below the camera: [here](https://www.amazon.com/gp/product/B077B5PPMQ/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
+* Vibration damping washers for mounting below the camera. I also put these washers between the thrusters and the vehicle's body: [here](https://www.amazon.com/gp/product/B077B5PPMQ/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 * 4 of steel corner brackets for mounting the camera plate: [here](https://www.alliedelec.com/product/keystone-electronics/4336/70181667/?referrer=search)
+* For my current build, I use mr60 connectors to bridge between the ESC's output wires and the penetrators. I think it would be better to use regular bullet connectors instead of these though: [here](https://www.amazon.com/gp/product/B0711XJ3Q2/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
+* Upgrading to the cobalt connector-ized thrusters was a big lifestyle improvement. I use the cobalt connectors whenever I can: https://www.bluetrailengineering.com/product-page/blue-robotics-t200-thruster-with-cobalt-connector
+
+# Notes
 
 # Software setup
+
+## TODO flesh this out
 
 Install SimpleSub on the FCU. The source code for SimpleSub can be found here https://gitlab.com/dartmouthrobotics/ardupilot-simplesub. Instructions for building and uploading coming soon.
 

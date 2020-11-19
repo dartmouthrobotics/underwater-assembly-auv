@@ -37,13 +37,18 @@ Camera:
 
 The mounting hardware order from McMaster has most of what you need. In addition to that, you need:
 
+* I use velcro straps rather than zip ties [here](https://www.amazon.com/gp/your-account/order-history/ref=ppx_yo_dt_b_search_od?ie=UTF8&ij=&opt=ab&ref_=&search=112-1121929-5260201). The rectangular  holes on the mounting plate are designed to allow you to feed the velcro through the plate allowing you to mount custom payloads easily.
+* Aluminum hex standoffs to accomodate for the longer body plate are needed. Four of [these](https://www.mcmaster.com/98952A108/) and two of [these](https://www.mcmaster.com/98952A118/)
 * A pack of vibration damping standoffs for the FCU: [here](https://www.amazon.com/gp/product/B082ZNTKXT/ref=ppx_yo_dt_b_search_asin_image?ie=UTF8&psc=1)
 * Vibration damping washers for mounting below the camera. I also put these washers between the thrusters and the vehicle's body: [here](https://www.amazon.com/gp/product/B077B5PPMQ/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 * 4 of steel corner brackets for mounting the camera plate: [here](https://www.alliedelec.com/product/keystone-electronics/4336/70181667/?referrer=search)
 * For my current build, I use mr60 connectors to bridge between the ESC's output wires and the penetrators. I think it would be better to use regular bullet connectors instead of these though: [here](https://www.amazon.com/gp/product/B0711XJ3Q2/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 * Upgrading to the cobalt connector-ized thrusters was a big lifestyle improvement. I use the cobalt connectors whenever I can: https://www.bluetrailengineering.com/product-page/blue-robotics-t200-thruster-with-cobalt-connector
+* I use high flexibility silicone wire everywhere inside the tube. It packs better than standard wire and is supposed to stand up better to vibration than standard wire. I used various sizes of this brand: [here](https://www.amazon.com/BNTECHGO-Silicone-Flexible-Resistant-Insulation/dp/B018H1BDP4/ref=pd_day0_23_1/146-2345653-4128354?_encoding=UTF8&pd_rd_i=B018H1BDP4&pd_rd_r=cafb2983-5c39-4335-8fcb-0022308be669&pd_rd_w=NUnrJ&pd_rd_wg=tu8oQ&pf_rd_p=ecf748b5-e796-4a0d-9a46-406a973ba8da&pf_rd_r=4QPC3SEZKFXJTSN7T173&psc=1&refRID=4QPC3SEZKFXJTSN7T173)
 
 # Notes
+
+* The ESC->penetrator connections are tough to fit in. You need to solder the ESC's wires at 90 degrees to the ESC body
 
 # Software setup
 

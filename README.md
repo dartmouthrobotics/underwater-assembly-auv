@@ -95,7 +95,7 @@ This command should be easier to replicate and it worked. The first usb serial d
 
 ## Notes on setting up the wifi to allow remote wireless shell access
 
-How to make the pi an access point
+How to make the upboard an access point
 
 1. Install isc-dhcp-server and hostapd
 
@@ -192,7 +192,9 @@ ifconfig wlan0 192.168.2.2 netmask 255.255.255.0
 service isc-dhcp-server start
 ```
 
-To stop the raspberry pi from lagging at boot when no network is connected, do 
+To stop the upboard from lagging at boot when no network is connected, do 
 
+```
 systemctl disable systemd-networkd-wait-online.service
 systemctl mask systemd-networkd-wait-online.service
+```

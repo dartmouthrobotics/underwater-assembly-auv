@@ -92,3 +92,107 @@ It looks like the issue with this was that when the device is rebooted by the fi
 This command should be easier to replicate and it worked. The first usb serial device is the one that shows normally, and the second is the one after trying to run the firmware uploader: 
 
 ./waf build --upload --targets simplesub/SimpleSub --upload-port /dev/serial/by-id/usb-ArduPilot_mRoX21_3C001D000C51383437313533-if00,/dev/serial/by-id/usb-AUAV_PX4_BL_AUAV_X2.1_0-if00 
+
+## Notes on setting up the wifi to allow remote wireless shell access
+
+How to make the pi an access point
+
+1. Install isc-dhcp-server and hostapd
+
+in file: /etc/hostapd/hostapd.conf add:
+
+```
+interface=wlan0
+driver=nl80211
+ssid=bluerov-network
+hw_mode=g
+channel=1
+macaddr_acl=0
+auth_algs=1
+ignore_broadcast_ssid=0
+wpa=3
+wpa_passphrase=BlueROV2
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP
+rsn_pairwise=CCMP
+```
+
+in file /etc/network/interfaces add:
+
+```
+# ifupdown has been replaced by netplan(5) on this system.  See
+# /etc/netplan for current configuration.
+# To re-enable ifupdown on this system, you can run:
+#    sudo apt install ifupdown
+
+auto wlan0
+iface wlan0 inet static
+	address 10.10.0.1
+	netmask 255.255.255.0
+```
+
+in file /etc/dhcp/dhcpd.conf add:
+
+```
+authoritative;
+log-facility local7;
+
+subnet 10.10.0.0 netmask 255.255.255.0 {
+	range 10.10.0.2 10.10.0.16;
+	option domain-name-servers 8.8.8.8;
+	option routers 10.10.0.1;
+	option subnet-mask 255.255.255.0;
+        option domain-name "testnet.local";
+        option broadcast-address 10.10.0.255;
+	default-lease-time 28800;
+	max-lease-time 28800;
+}
+```
+
+start hostapd:
+
+```
+sudo service hostapd start
+```
+
+give wlan0 an ip address:
+
+```
+sudo ifconfig wlan0 10.10.0.1 netmask 255.255.255.0
+```
+
+start isc-dhcp-server:
+
+```
+sudo service isc-dhcp-server start
+```
+
+Make sure to edit the file /etc/default/hostapd and set the DAEMON_CONF value
+
+need also to "unmask" the hostapd service
+
+```
+sudo systemctl unmask hostapd
+sudo systemctl enable hostapd
+```
+
+Also make sure to edit the INTERFACESV4 variable in /etc/default/isc-dhcp-server to include wlan0
+
+It should be `INTERFACESV4="wlan0"` also the file should include `INTERFACES="wlan0"`
+
+In /etc/rc.local do:
+
+```
+#! /bin/sh -e
+
+service hostapd stop
+service isc-dhcp-server stop
+service hostapd start
+ifconfig wlan0 192.168.2.2 netmask 255.255.255.0
+service isc-dhcp-server start
+```
+
+To stop the raspberry pi from lagging at boot when no network is connected, do 
+
+systemctl disable systemd-networkd-wait-online.service
+systemctl mask systemd-networkd-wait-online.service
